@@ -37,7 +37,7 @@ ex:
 	pop:1,2,5,6,7,9
 	pop:1,2,5,6,7,9,10
   *run4
-	push:10,9,7,6,5,2,1,overflow
+	push:10,9,7,6,5,2,1
 	complete sort
 -----------------------------------------
 version2
@@ -60,7 +60,8 @@ version2
 	stack:10,9,6
 	pop:1,2,5,7,6,9,10
   *run3
-	push:10,9,7,6,5,2,1,overflow
+	push:10,9,7,6,5,2,1
+	pos:7 (pos[0]==length of array)
 	complete sort
 -----------------------------------------
 version3

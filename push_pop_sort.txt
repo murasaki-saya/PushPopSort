@@ -65,6 +65,8 @@ version2
 	pos:7 (pos[0]==length of array)
 	complete sort
   *if (position.length==2) then use merge
+   or
+   just execute stage 1, then use merge sort
 -----------------------------------------
 version3
   10,7,5,9,1,6,2

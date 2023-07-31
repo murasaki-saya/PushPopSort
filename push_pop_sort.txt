@@ -64,6 +64,7 @@ version2
 	stack:10,9,7,6,5,2,1
 	pos:7 (pos[0]==length of array)
 	complete sort
+  *if (position.length==2) then use merge
 -----------------------------------------
 version3
   10,7,5,9,1,6,2

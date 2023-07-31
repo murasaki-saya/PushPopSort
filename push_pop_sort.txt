@@ -91,3 +91,53 @@ version3
 	pop:1,2,5,6,7,9,10 (pop to array)
 	pop array to stack=>stack:10,9,7,6,5,2,1,overflow
 	complete sort
+------------------------------------------
+version3.5
+  10,7,5,9,1,6,2
+  *run1
+	stack:10,7,5
+	pop:5,7
+
+	stack:10,9,1
+	pop:5,7,1
+
+	stack:10,9,6,2
+	(array = pop)
+	array:5,7,1
+  *run2
+	(array compare to stack, and then pop)
+	stack:10,9,6,2
+	array:5,7,1
+	pop:2
+
+	stack:10,9,6,5
+	array:7,1
+	pop:2,5,6
+
+	stack:10,9,7,1
+	array:null
+	pop:2,5,6
+	(array = pop)
+	array:2,5,6
+	*if (stack[top] < array[last]) then continue
+	 else pop stack	
+  *run3
+	stack:10,9,7,1
+	array:2,5,6
+	pop:1
+	
+	stack:10,9,7,2
+	array:5,6
+	pop:1,2
+	
+	stack:10,9,7,5
+	array:6
+	pop:1,2,5
+
+	stack:10,9,7,6
+	array:null
+	pop:1,2,5
+	*if (stack[top] < array[last]) then continue
+	 else pop stack
+	pop:1,2,5,6,7,9,10
+	complete sort

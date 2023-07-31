@@ -1,0 +1,40 @@
+ex:
+  10,7,5,9,1,6,2
+  *run1
+	stack:10,7,5
+	pop:5,7
+	stack:10,9,1
+	pop:5,7,1
+	stack:10,9,6,2
+	pop:5,7,1,2,6,9,10
+  *run2
+	stack:5
+	pop:5
+	stack:7,1
+	pop:5,1
+	stack:7,2
+	pop:5,1,2
+	stack:7,6
+	pop:5,1,2,6,7
+	stack:9
+	pop:5,1,2,6,7,9
+	stack:10
+	pop:5,1,2,6,7,9,10
+  *run3
+	stack:5,1
+	pop:1
+	stack:5,2
+	pop:1,2
+	stack:6
+	pop:1,2,5
+	stack:7
+	pop:1,2,5,6
+	stack:9
+	pop :1,2,5,6,7
+	stack:10
+	pop:1,2,5,6,7,9
+	pop:1,2,5,6,7,9,10
+  *run4
+	push:10,9,7,6,5,2,1,overflow
+	complete sort
+	  

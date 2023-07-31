@@ -82,6 +82,7 @@ version3
 	array:7
 	pop:1,2,5,6
 	stack:10,9,7
+	array:na
 	pop:1,2,5,6,7,9,10 (pop to array)
 	pop array to stack=>stack:10,9,7,6,5,2,1,overflow
 	complete sort

@@ -1,3 +1,5 @@
+small=>push ; 
+big=>pop;
 ex:
   10,7,5,9,1,6,2
   *run1
@@ -7,6 +9,7 @@ ex:
 	pop:5,7,1
 	stack:10,9,6,2
 	pop:5,7,1,2,6,9,10
+	push:10,9,6,2,1 (no overflow)
   *run2
 	stack:5
 	pop:5
@@ -20,6 +23,7 @@ ex:
 	pop:5,1,2,6,7,9
 	stack:10
 	pop:5,1,2,6,7,9,10
+	push:10,9,7,6,2,1 (no overflow)
   *run3
 	stack:5,1
 	pop:1
@@ -36,5 +40,49 @@ ex:
 	pop:1,2,5,6,7,9,10
   *run4
 	push:10,9,7,6,5,2,1,overflow
+	complete sort
+-----------------------------------------
+version2
+  10,7,5,9,1,6,2
+  *run1
+	stack:10,7,5
+	stack:9,1
+	stack:6,2
+  *run2
+	run virtically(stack1 to stack3)
+	stack:5,1
+	pop:1
+	stack:5,2
+	pop:1,2,5
+	stack:7
+	pop:1,2,5,7
+	stack:10,9,6
+	pop:1,2,5,7,6,9,10
+  *run3
+	push:10,9,7,6,5,2,1,overflow
+	complete sort
+-----------------------------------------
+version3
+  10,7,5,9,1,6,2
+  *run1
+	stack:10,7,5
+	pop:5,7
+	stack:10,9,1
+	pop:5,7,1
+	stack:10,9,6,2
+	pop:5,7,1,2,6,9,10 (pop to array)
+	pop array to stack=>stack:10,9,6,2,1 (no overflow)
+	array:5,7
+  *run2
+	(array compare to stack, and then pop)
+	pop:1,2
+	stack:10,9,6
+	array:5,7
+	stack:10,9,6,5
+	array:7
+	pop:1,2,5,6
+	stack:10,9,7
+	pop:1,2,5,6,7,9,10 (pop to array)
+	pop array to stack=>stack:10,9,7,6,5,2,1,overflow
 	complete sort
 	  

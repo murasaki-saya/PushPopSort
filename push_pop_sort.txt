@@ -42,14 +42,15 @@ ex:
 -----------------------------------------
 version2
   mutiple stack in one array, and use another array to record stacks' position respectively
-  10,7,5,9,1,6,2
   *run1
+	10,7,5,9,1,6,2
+  *stage1
 	stack:10,7,5
 	stack:9,1
 	stack:6,2
 	position:3,5,7
 	pos[0]!=7 (pos[0]!=length of array)
-  *run2
+  *stage2
 	run virtically(stack1 to stack3)
 	stack:5,1
 	pop:1
@@ -58,9 +59,9 @@ version2
 	stack:7
 	pop:1,2,5,7
 	stack:10,9,6
-	pop:1,2,5,7,6,9,10
-  *run3
-	push:10,9,7,6,5,2,1
+	pop:1,2,5,7,6,9,10 (push to stack)
+  *run2
+	stack:10,9,7,6,5,2,1
 	pos:7 (pos[0]==length of array)
 	complete sort
 -----------------------------------------
